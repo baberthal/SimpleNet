@@ -15,20 +15,6 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Volumes/SSD2/projects/swift/SimpleNet/Sources/SimpleNet/SimpleNet.swift",
-      "line": 1,
-      "symbol": "SimpleNet",
-      "symbol_kind": "source.lang.swift.decl.struct",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Volumes/SSD2/projects/swift/SimpleNet/Sources/SimpleNet/SimpleNet.swift",
-      "line": 3,
-      "symbol": "SimpleNet.text",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Volumes/SSD2/projects/swift/SimpleNet/Sources/SimpleNet/TCPServer.swift",
       "line": 16,
       "symbol": "TCPServer",
