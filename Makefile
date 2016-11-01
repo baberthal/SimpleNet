@@ -25,6 +25,7 @@ JAZZY = /Users/morgan/.rvm/gems/ruby-2.3.1@global/bin/jazzy
 OPEN = /usr/bin/open
 PKG_CONFIG = /usr/local/bin/pkg-config
 SWIFT_LINT = /usr/local/bin/swiftlint
+GIT = /usr/local/bin/git
 
 ####################
 #   DEPENDENCIES   #
@@ -75,8 +76,8 @@ DOC_TARGETS = $(addprefix docs-,LoggerAPI SimpleNet Threading)
 #                                   TARGETS                                    #
 ################################################################################
 .PHONY: all build build-debug build-release test clean \
-  distclean fetch update-deps xcodeproj docs read-docs clean-xcode \
-  regenerate-xcode release run
+  distclean fetch update-deps xcodeproj docs read-docs \
+  clean-docs clean-xcode  regenerate-xcode release run
 
 all: build
 
@@ -88,8 +89,10 @@ print-%: ; @echo $*=$($*)
 
 docs: $(DOC_TARGETS)
 	$(RM_R) build
+	$(GIT) add docs
+	$(GIT) commit --message "Regenerate Documentation"
 
-$(DOC_TARGETS): $(PROJECT_NAME).xcodeproj
+$(DOC_TARGETS): $(PROJECT_NAME).xcodeproj | clean-docs
 	$(JAZZY) --module $(subst docs-,,$@) \
 	  --xcodebuild-arguments -target,$(subst docs-,,$@) \
 	  --readme Sources/$(subst docs-,,$@)/README.md \
@@ -106,6 +109,9 @@ clean:
 
 clean-xcode:
 	$(RM_R) $(PROJECT_NAME).xcodeproj
+
+clean-docs:
+	$(RM_R) ./docs
 
 distclean: clean clean-xcode
 	$(RM_R) Packages
