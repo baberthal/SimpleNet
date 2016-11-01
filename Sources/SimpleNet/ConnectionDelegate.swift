@@ -12,7 +12,7 @@ import struct Dispatch.DispatchData
 /// The `ConnectionDelegate` protocol describes an interface that should be
 /// implemented by the delegate for an instance of the `Connection` class.
 ///
-/// # Conforming to the `ConnectionDelegate` protocol
+/// ## Conforming to the `ConnectionDelegate` protocol
 ///
 /// Implement the `connection(_:didReceive:Data)` method to handle any incoming
 /// data on the connection.
@@ -34,8 +34,6 @@ public protocol ConnectionDelegate {
   func connection(_ connection: Connection, didReceive data: Data)
 
   /// Convenience method for receiving a `DispatchData` structure.
-  ///
-  /// This method is optional, and the provided default implementation is a no-op.
   ///
   /// - parameter connection: The connection sending the message.
   /// - parameter data: The newly available `DispatchData` structure.
