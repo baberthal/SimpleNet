@@ -7,8 +7,8 @@ let package = Package(
         Target(name: "SimpleNet", dependencies: ["LoggerAPI"])
     ],
     dependencies: [
-        .Package(url: "https://github.com/IBM-Swift/BlueSocket.git",
-                 majorVersion: 0, minor: 11)
+        .Package(url: "https://github.com/baberthal/RingBuffer.git", majorVersion: 1),
+        .Package(url: "https://github.com/IBM-Swift/BlueSocket.git", majorVersion: 0, minor: 11)
     ],
     exclude: ["Makefile", "docs/*", "README.md"]
 )
