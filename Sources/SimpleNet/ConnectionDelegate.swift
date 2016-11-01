@@ -29,6 +29,14 @@ public protocol ConnectionDelegate {
   ///             of each `data` object delivered to build up the complete data for the
   ///             request.
   func connection(_ connection: Connection, didReceive data: Data)
+
+  /// Convenience method for receiving a `DispatchData` structure.
+  ///
+  /// This method is optional, and the provided default implementation is a no-op.
+  ///
+  /// - parameter connection: The connection sending the message.
+  /// - parameter data: The newly available `DispatchData` structure.
+  func connection(_ connection: Connection, didReceive data: DispatchData)
 }
 
 /// Default implementations
@@ -41,9 +49,7 @@ extension ConnectionDelegate {
   public func connection(_ connection: Connection, didReceive data: Data) {
   }
 
-  /// Convenience method for receiving a `DispatchData` structure.
-  ///
-  /// This method simply converts the `DispatchData` struct to a `Data` struct,
+  /// The default implementaion simply converts the `DispatchData` struct to a `Data` struct,
   /// and calls `connection(_:didReceive:)` with the resulting `Data` struct.
   ///
   /// - parameter connection: The connection sending the message.
