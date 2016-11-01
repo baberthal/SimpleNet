@@ -4,7 +4,8 @@ let package = Package(
     name: "SimpleNet",
     targets: [
         Target(name: "LoggerAPI", dependencies: []),
-        Target(name: "SimpleNet", dependencies: ["LoggerAPI"])
+        Target(name: "Threading", dependencies: []),
+        Target(name: "SimpleNet", dependencies: ["Threading", "LoggerAPI"])
     ],
     dependencies: [
         .Package(url: "https://github.com/baberthal/RingBuffer.git", majorVersion: 1),
