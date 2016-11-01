@@ -24,6 +24,9 @@ public struct Event {
   /// Returns `true` if and only if the internal flag is `true`
   public var isSet: Bool { return self._flag }
 
+  /// Create a default event
+  public init() {}
+
   /// Set the internal flag to `true`.
   ///
   /// All threads waiting for the flag to become true are awakened. 
