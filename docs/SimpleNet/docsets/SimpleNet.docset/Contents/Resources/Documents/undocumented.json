@@ -2,7 +2,7 @@
   "warnings": [
     {
       "file": "/Volumes/SSD2/projects/swift/SimpleNet/Sources/SimpleNet/BaseServer.swift",
-      "line": 11,
+      "line": 12,
       "symbol": "BaseServer",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
@@ -16,7 +16,7 @@
     },
     {
       "file": "/Volumes/SSD2/projects/swift/SimpleNet/Sources/SimpleNet/TCPServer.swift",
-      "line": 16,
+      "line": 17,
       "symbol": "TCPServer",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"

@@ -97,7 +97,22 @@
         <section class="section">
           <div class="section-content">
             
-            
+            <a href='#loggerapi' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h1 id='loggerapi'>LoggerAPI</h1>
+
+<p>Based on <a href="https://github.com/IBM-Swift/LoggerAPI">IBM-Swift/LoggerAPI</a>.</p>
+
+<p>A logger protocol that can be implemented by various Logger implementations.
+Additionally, a class with a set of static methods for logging to the active
+implemention.</p>
+
+<p>The following implementations are provided with the module:
+  * <code>TTYLogger</code> - a logger that logs to stdout, with optional colored messages
+  * <code>SystemLogger</code> - a logger that logs to the system log facility, dependent
+    upon the OS: On Linux, it uses <code>syslog</code>, and on Darwin it uses the
+    <a href="https://developer.apple.com/reference/os/1891852-logging?language=objc">unified logger interface</a>
+    if available, otherwise it falls back to
+    <a href="https://developer.apple.com/legacy/library/documentation/Darwin/Reference/ManPages/man3/asl.3.html">ASL</a>.</p>
+
           </div>
         </section>
 
