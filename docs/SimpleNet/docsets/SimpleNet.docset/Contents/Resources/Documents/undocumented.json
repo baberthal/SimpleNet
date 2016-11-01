@@ -1,6 +1,20 @@
 {
   "warnings": [
     {
+      "file": "/Volumes/SSD2/projects/swift/SimpleNet/Sources/SimpleNet/BaseServer.swift",
+      "line": 11,
+      "symbol": "BaseServer",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/SSD2/projects/swift/SimpleNet/Sources/SimpleNet/ServerAddress.swift",
+      "line": 9,
+      "symbol": "ServerAddress",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Volumes/SSD2/projects/swift/SimpleNet/Sources/SimpleNet/SimpleNet.swift",
       "line": 1,
       "symbol": "SimpleNet",
