@@ -69,7 +69,7 @@ XCODEPROJ_FLAGS   = $(XCODEPROJ_CFLAGS) $(XCODEPROJ_LDFLAGS)
 ###########################
 #  Documentation Targets  #
 ###########################
-DOC_TARGETS = $(addprefix docs-,LoggerAPI SimpleNet)
+DOC_TARGETS = $(addprefix docs-,LoggerAPI SimpleNet Threading)
 
 ################################################################################
 #                                   TARGETS                                    #
