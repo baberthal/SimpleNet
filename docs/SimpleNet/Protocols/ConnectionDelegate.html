@@ -132,6 +132,11 @@
             <p>The <code>ConnectionDelegate</code> protocol describes an interface that should be
 implemented by the delegate for an instance of the <code><a href="../Classes/Connection.html">Connection</a></code> class.</p>
 
+<p><a href='#conforming-to-the-code-connectiondelegate-code-protocol' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h1 id='conforming-to-the-code-connectiondelegate-code-protocol'>Conforming to the <code>ConnectionDelegate</code> protocol</h1></p>
+
+<p>Implement the <code>connection(_:didReceive:Data)</code> method to handle any incoming
+data on the connection.</p>
+
           </div>
         </section>
 
@@ -207,7 +212,7 @@ implemented by the delegate for an instance of the <code><a href="../Classes/Con
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/baberthal/SimpleNet/tree/master/Sources/SimpleNet/ConnectionDelegate.swift#L21">Show on GitHub</a>
+                        <a href="https://github.com/baberthal/SimpleNet/tree/master/Sources/SimpleNet/ConnectionDelegate.swift#L26">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -230,14 +235,10 @@ implemented by the delegate for an instance of the <code><a href="../Classes/Con
                       <div class="abstract">
                         <p>Sent as a connection loads data incrementally.</p>
 
-<p>This method is optional, and the provided default implementation is a no-op.</p>
-
                       </div>
                       <h4>Default Implementation</h4>
                       <div class="default_impl abstract">
-                        <p>Empty</p>
-
-<p>The default implementaion simply converts the <code>DispatchData</code> struct to a <code>Data</code> struct,
+                        <p>The default implementaion simply converts the <code>DispatchData</code> struct to a <code>Data</code> struct,
 and calls <code>connection(_:didReceive:)</code> with the resulting <code>Data</code> struct.</p>
 
                       </div>
@@ -283,7 +284,7 @@ and calls <code>connection(_:didReceive:)</code> with the resulting <code>Data</
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/baberthal/SimpleNet/tree/master/Sources/SimpleNet/ConnectionDelegate.swift#L31">Show on GitHub</a>
+                        <a href="https://github.com/baberthal/SimpleNet/tree/master/Sources/SimpleNet/ConnectionDelegate.swift#L34">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -348,7 +349,7 @@ and calls <code>connection(_:didReceive:)</code> with the resulting <code>Data</
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/baberthal/SimpleNet/tree/master/Sources/SimpleNet/ConnectionDelegate.swift#L39">Show on GitHub</a>
+                        <a href="https://github.com/baberthal/SimpleNet/tree/master/Sources/SimpleNet/ConnectionDelegate.swift#L42">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
