@@ -50,10 +50,10 @@ extension ConnectionDelegate {
   /// and calls `connection(_:didReceive:)` with the resulting `Data` struct.
   ///
   /// - parameter connection: The connection sending the message.
-  /// - parameter data: The newly available `DispatchData` structure.
-  func connection(_ connection: Connection, didReceive data: DispatchData) {
-    let someData: Data = data.withUnsafeBytes(body: { (bytePointer: UnsafePointer<UInt8>) in
-      return Data(bytes: bytePointer, count: data.count)
+  /// - parameter dispatchData: The newly available `DispatchData` structure.
+  func connection(_ connection: Connection, didReceive dispatchData: DispatchData) {
+    let someData: Data = dispatchData.withUnsafeBytes(body: { (bytePointer: UnsafePointer<UInt8>) in
+      return Data(bytes: bytePointer, count: dispatchData.count)
     })
 
     self.connection(connection, didReceive: someData)
